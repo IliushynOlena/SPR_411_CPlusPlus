@@ -34,8 +34,51 @@ int* FindMax(int *a, int *b, int *c)
     }
     return c;
 }
+void FillArr(int* arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        *(arr + i) = rand() % 100;
+    }
+}
+void ShowArr(int* arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout<< *(arr + i)<< " ";
+    }
+    cout << endl;
+}
+int* FindMax(int* arr, int size)
+{
+    int* max = arr;
+    for (int i = 0; i < size; i++)
+    {
+        if (*(arr + i) > (*max) )
+        {
+            max= arr+ i;
+        }
+    }
+    return max;
+}
+
 int main()
 {
+    srand(time(0));
+    const int size = 10;
+    int arr[size];
+    cout << arr << endl;
+    //FillArr(&arr[0], size);
+    FillArr(arr, size);
+    ShowArr(arr, size);
+    int* Max = FindMax(arr, size);
+    cout << "Max address " << Max << endl;
+    cout << "Max = " << *Max << endl;
+
+    *Max = (*Max) * 2;
+    ShowArr(arr, size);
+
+
     int x = 0, y = 0, z = 0;
     cout << "Enter x, y , z : ";
     cin >> x >> y >> z;
@@ -86,9 +129,9 @@ int main()
     //cout << *pa << endl;
     //cout << *pb << endl;
 
-    const int size = 5;
-    int arr[size];
-    int* parr = &arr[0];//0x21545
+    //const int size = 5;
+    //int arr[size];
+    //int* parr = &arr[0];//0x21545
     //example 1
     //for (int i = 0; i < size; i++)
     //{
