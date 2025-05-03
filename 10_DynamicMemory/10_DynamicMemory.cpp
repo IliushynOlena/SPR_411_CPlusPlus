@@ -48,9 +48,23 @@ int* AddNumber(int* arr, int *size, int number)
 	arr = temp;
 	return arr;
 }
-void AddByPosition(int* arr, int* size, int number, int pos)
+int *AddByPosition(int* arr, int* size, int number, int pos)
 {
-
+	if (pos > *size) pos = *size;
+	if (pos < 0) pos = 0;
+	(*size)++;//size = 6
+	int* temp = new int[*size];
+	for (int i = 0; i < pos; i++)
+	{
+		temp[i] = arr[i];
+	}
+	temp[pos] = number;
+	for (int i = pos; i < *size; i++)
+	{
+		temp[i + 1] = arr[i];
+	}	delete[]arr;
+	arr = temp;
+	return arr;
 }
 int main()
 {
@@ -73,10 +87,11 @@ int main()
 
 		cout << "Enter number : ";
 		cin >> number;//14
-		arr = AddNumber(arr, &size, number);
+	/*	arr = AddNumber(arr, &size, number);
 		system("cls");
+		ShowArr(arr, size);*/
+		arr = AddByPosition(arr, &size, 100, 3);
 		ShowArr(arr, size);
-
 	}
 
 
