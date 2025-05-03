@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
 void Test1()
@@ -34,15 +35,52 @@ void ShowArr(int* arr, int size)
 	}
 	cout << endl;
 }
+int* AddNumber(int* arr, int *size, int number)
+{
+	(*size)++;//size = 6
+	int* temp = new int[*size];
+	for (int i = 0; i < (*size) - 1; i++)
+	{
+		temp[i] = arr[i];
+	}
+	temp[(*size) - 1] = number;
+	delete[]arr;
+	arr = temp;
+	return arr;
+}
+void AddByPosition(int* arr, int* size, int number, int pos)
+{
+
+}
 int main()
 {
 	srand(time(0));
 	int size = 5;
-	cout << "Enter size : ";
-	cin >> size;
+	/*cout << "Enter size : ";
+	cin >> size;*/
 	int *arr = CreateArr(size);
 	FillArr(arr, size);
 	ShowArr(arr, size);
+
+	int number;
+	char choice = 'y';
+	while (true)
+	{
+		cout << "Do you want to add number in arr ? y/n";
+		choice = _getch();
+		//cin >> choice;
+		if (choice == 'n')break;
+
+		cout << "Enter number : ";
+		cin >> number;//14
+		arr = AddNumber(arr, &size, number);
+		system("cls");
+		ShowArr(arr, size);
+
+	}
+
+
+
 
 	delete[]arr;
 
