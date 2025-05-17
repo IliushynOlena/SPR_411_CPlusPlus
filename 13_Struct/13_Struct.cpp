@@ -48,10 +48,11 @@ void Show(Person p)
 int main()
 {
 
-    //Person Nick = { "Nick","Tomson",22,"male",30000,{10,05,2002},{1,1,2022} };
-    //Show(Nick);
-    //Input(Nick);
-    //Show(Nick);
+    Person Nick = { "Nick","Tomson",22,"male",30000,{10,05,2002},{1,1,2022} };
+    Show(Nick);
+    Input(Nick);
+    Show(Nick);
+    
 
 
     int a = 5;
