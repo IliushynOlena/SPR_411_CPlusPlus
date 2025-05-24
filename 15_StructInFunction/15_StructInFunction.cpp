@@ -63,6 +63,7 @@ void TheMostPopular(Movie movies[], int size, char genre[])
     }
     Show(movies[maxIndex]);
 }
+
 int main()
 {
     int choice;
