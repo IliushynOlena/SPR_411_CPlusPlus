@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "16_HumanSaveToFile", "16_Hu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17_IntroToOOP", "17_IntroToOOP\17_IntroToOOP.vcxproj", "{55EF56AE-A3AF-481D-9AB4-ED9A6513994E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_ConstructorDestructor", "18_ConstructorDestructor\18_ConstructorDestructor.vcxproj", "{319066D8-0DE7-45C7-A742-8772FAB60719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{55EF56AE-A3AF-481D-9AB4-ED9A6513994E}.Release|x64.Build.0 = Release|x64
 		{55EF56AE-A3AF-481D-9AB4-ED9A6513994E}.Release|x86.ActiveCfg = Release|Win32
 		{55EF56AE-A3AF-481D-9AB4-ED9A6513994E}.Release|x86.Build.0 = Release|Win32
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Debug|x64.ActiveCfg = Debug|x64
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Debug|x64.Build.0 = Debug|x64
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Debug|x86.ActiveCfg = Debug|Win32
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Debug|x86.Build.0 = Debug|Win32
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Release|x64.ActiveCfg = Release|x64
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Release|x64.Build.0 = Release|x64
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Release|x86.ActiveCfg = Release|Win32
+		{319066D8-0DE7-45C7-A742-8772FAB60719}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

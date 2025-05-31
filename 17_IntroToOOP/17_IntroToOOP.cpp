@@ -113,7 +113,7 @@ public:
 	}
 };
 
-
+void Hello(){}
 int main()
 {
 	int a;
@@ -127,6 +127,8 @@ int main()
 	cout << "Name : " << st.getName() << ". Marks : " 
 		<< st.getMark(0) << ", " << st.getMark(1) << ", " << st.getMark(2) << endl;
 	cout << "Average mark : " << st.getAverage() << endl;
+	cout << Hello << endl;
+	Hello();
 	
 
 	Student st2;
