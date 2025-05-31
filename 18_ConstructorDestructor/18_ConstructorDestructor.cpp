@@ -115,6 +115,22 @@ public:
 		this->markCount = 0;
 		this->average = 0;
 	}
+	Student(const Student &other)
+	{
+		this->fullname = other.fullname;//Olga --> Olga
+		this->birthdate = other.birthdate;//15 --> 15
+		this->city = other.city;         //"+3522" ---> "+3522"
+		this->country = other.country;
+		this->markCount = other.markCount;
+		//this->marks = other.marks;       //0x36525   --> 0x36525
+		this->marks = new int[other.markCount];
+		for (int i = 0; i < markCount; i++)
+		{
+			this->marks[i] = other.marks[i];
+		}
+		this->average = other.average;
+
+	}
 	void setName(string name)
 	{
 		fullname.name = name;
@@ -236,4 +252,8 @@ int main()
 		"+380961452374","Rivne","Ukraine","NYVGP","Rivne","Ukraine","PD111");
 	//parametrized constructor
 	st3.Print();
+	cout << "Copy object " << endl;
+	//Copy constructor
+	Student copy(student);
+	copy.Print();
 }
