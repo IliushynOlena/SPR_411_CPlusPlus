@@ -131,10 +131,8 @@ public:
 		this->average = other.average;
 
 	}
-	void setName(string name)
-	{
-		fullname.name = name;
-	}
+	void setName(string name);//prototype of method
+
 	void setSurname(string surname)
 	{
 		fullname.surname = surname;
@@ -188,27 +186,7 @@ public:
 		markCount = 0;
 		average = 0;
 	}
-	void Print()
-	{
-		cout << "Fullname : " << fullname.name << " " << fullname.surname << " " <<
-			fullname.lastname << endl;
-		cout << "Birthadate : " << birthdate.day << " " << birthdate.month << " "
-			<< birthdate.year << endl;
-		cout << "Phone : " << phone << endl;
-		cout << "City : " << city << endl;
-		cout << "Country : " << country << endl;
-		cout << "University : " << university << endl;
-		cout << "City University : " << city_university << endl;
-		cout << "Country University : " << country_university << endl;
-		cout << "Group : " << group << endl;
-		cout << "Marks : ";
-		for (int i = 0; i < markCount; i++)
-		{
-			cout << marks[i] << " ";
-		}
-		cout << endl;
-		cout << "Average mark : " << average << endl;
-	}
+	void Print();
 	~Student()
 	{
 		cout << "Destructor "<< fullname.name << endl;
@@ -217,7 +195,11 @@ public:
 			delete[]marks;
 	}
 };
-class User{};
+class User{
+	//default constructor 
+	//copy constructor 
+	//destructor
+};
 
 int main()
 {
@@ -256,4 +238,31 @@ int main()
 	//Copy constructor
 	Student copy(student);
 	copy.Print();
+}
+
+inline void Student::setName(string name)
+{
+	fullname.name = name;
+}
+
+void Student::Print()
+{
+	cout << "Fullname : " << fullname.name << " " << fullname.surname << " " <<
+		fullname.lastname << endl;
+	cout << "Birthadate : " << birthdate.day << " " << birthdate.month << " "
+		<< birthdate.year << endl;
+	cout << "Phone : " << phone << endl;
+	cout << "City : " << city << endl;
+	cout << "Country : " << country << endl;
+	cout << "University : " << university << endl;
+	cout << "City University : " << city_university << endl;
+	cout << "Country University : " << country_university << endl;
+	cout << "Group : " << group << endl;
+	cout << "Marks : ";
+	for (int i = 0; i < markCount; i++)
+	{
+		cout << marks[i] << " ";
+	}
+	cout << endl;
+	cout << "Average mark : " << average << endl;
 }
