@@ -59,6 +59,7 @@ int main()
 	doSomething(9);//int -----> long
 
 	double res = 5.0 / 4;
+	int number1 = 3.33;
 	//explicit - явне
 	int number = (int) 3.33;
 	int size = 5;

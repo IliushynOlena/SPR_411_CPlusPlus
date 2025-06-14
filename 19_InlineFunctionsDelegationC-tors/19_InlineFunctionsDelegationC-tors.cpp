@@ -48,13 +48,16 @@ public:
         //this->name = name;
         //this->age = age;
         this->weight = weight;
+       
     }
     static  int getCountHuman()
     {
+       
         return countHuman;
     }
     void Show()
     {
+       
         cout << "Name : " << name << endl;
         cout << "Age : " << age << endl;
         cout << "Weight : " << weight << endl;
