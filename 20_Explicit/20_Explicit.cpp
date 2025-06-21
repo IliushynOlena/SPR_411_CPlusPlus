@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void doSomething(long number) {
@@ -30,6 +31,28 @@ public:
 	{
 		return arr[index];
 	}
+	int operator [](int index)
+	{
+		return arr[index];
+	}
+	void AddNumber(int number)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			arr[i] += number;
+		}
+	}
+	void operator()(int number)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			arr[i] += number;
+		}
+	}
+	void operator()(int number, int index)
+	{		
+			arr[index] += number;		
+	}
 	void setValue(int value, int index)
 	{
 		arr[index] = value;
@@ -37,6 +60,23 @@ public:
 	void display(int index)const
 	{
 		cout << arr[index] << " ";
+	}
+	void Print()
+	{
+		for (int i = 0; i < size; i++)
+		{
+			cout << arr[i] << " ";
+		}
+		cout << endl;
+	}
+	operator string()
+	{
+		string res = "";
+		for (int i = 0; i < size; i++)
+		{
+			res += to_string( arr[i]) + " ";
+		}
+		return res;
 	}
 };
 
@@ -63,13 +103,24 @@ int main()
 	//explicit - явне
 	int number = (int) 3.33;
 	int size = 5;
-	Array arr(size);//parametrized c-tor
-	for (int i = 0; i < arr.getSize(); i++)
+	Array array(size);//parametrized c-tor
+	for (int i = 0; i < array.getSize(); i++)
 	{
-		arr.setValue(size - i, i);
+		array.setValue(size - i, i);
 	}
-	Display(arr);
+	Display(array);
 	cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;	
+	cout << "First element in array : " << array.getValue(0) << endl;
+	cout << "First element in array : " << array[0] << endl;
+	array.AddNumber(5);
+	Display(array);
+	array(2);
+	Display(array);
+	array(10, 0);
+	Display(array);
+	cout << (string)array << endl;
+	// students[0]
+	//cout << "First element in array : " << university[0] << endl;
 	//Display(15);//int ----> Array
 	//Array test = 14;//int ----> Array
 	//Display(test);
