@@ -47,7 +47,14 @@ Rectangle::operator Square()
 }
 int main()
 {
+    cout << "Hello" << endl;
+    while (true)
+    {
+        cout << "--------------" << endl;
+    }
+    cout << "Hello2" << endl;
     //int string bool char float double 
+    int a = 3.33;
     int value = 9;// int ----> int
     //standart to standart
     double b = value;//int ----> double 9.00000000000000
