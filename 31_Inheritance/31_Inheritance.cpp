@@ -3,8 +3,9 @@ using namespace std;
 
 class Enemy
 {
-protected:
+private:
 	string name;
+protected:
 	int health;
 	float strength;
 	int speed;
@@ -36,6 +37,7 @@ public:
 //[spetificator] - private, public , protected
 class Dragon: public Enemy
 {
+private:
 	float armor;
 public:
 	Dragon():armor(0), Enemy(){}

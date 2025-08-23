@@ -29,7 +29,7 @@ public:
         this->speed = (speed > 0) ? speed : 0;
        
     }
-    void Print()const
+    virtual void Print()const
     {
         cout << "-----------Car------------------" << endl;
         cout << "Mark : " << mark << endl;
@@ -50,13 +50,13 @@ public:
     PoliceCar():volumeSound(0),Car(){}
     PoliceCar(string m, float v, string tf, int y,int vol):volumeSound(vol),
         Car(m,v,tf,y){}
-    void Print()const
+    void Print()const override
     {
         cout << "----------- Police Car------------------" << endl;
         Car::Print();
         cout << "Sound volume " << volumeSound << endl;
     }
-    void Drive()const
+    void Drive() const override
     {
         cout << "I am a Police Car! I can drive with speed : " << speed << " km/h" << endl;
     }
@@ -209,13 +209,13 @@ public:
     SportCar() :turbo(0), Car() {}
     SportCar(string m, float v, string tf, int y, int t) :turbo(t),
         Car(m, v, tf, y) {}
-    void Print()const
+    void Print()const override
     {
         cout << "----------- Police Car------------------" << endl;
         Car::Print();
         cout << "Turbo speed " << turbo << endl;
     }
-    void Drive() const override
+    void Drive() const 
     {
         cout << "I am a Sport Car! I can drive with speed : " << speed << " km/h" << endl;
     }
@@ -231,6 +231,7 @@ void TestCar(Car& car)
     car.setSpeed(70);
     car.Drive();
 }
+class Test {};
 int main()
 {
     Car car("Nissan", 1.5, "gazoline", 2007);
@@ -251,6 +252,30 @@ int main()
     TestCar(car);
     TestCar(p);
     TestCar(sport);
+    int arr[10];
+    float arr2[5];
+    Car cars[] = { car, sport, p };
+
+    int a = 5;
+    int* pa = &a;
+    int& lb = a;
+    Car* cars2[3]
+    {
+        new Car("Nissan", 1.5, "gazoline", 2007),
+        new PoliceCar("Prius",2.0,"hybrid",2020,500),
+        new  SportCar("Formula1", 2.5, "gazoline", 2025, 50),
+    };
+
+    for (int i = 0; i < 3; i++)
+    {
+        cars2[i]->Drive();
+        cars2[i]->Print();
+        cout << endl;
+    }
+    for (int i = 0; i < 3; i++)
+    {
+        delete cars2[i];
+    }
 
 
 
