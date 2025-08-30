@@ -23,9 +23,7 @@ public:
     virtual void Move()const
     {
         cout << "I am moving....." << endl;
-    } 
-
-    
+    }  
 };
 class Lion : public Animal
 {
@@ -88,7 +86,7 @@ void RollCall(Animal& a)
 }
 int main()
 {
-    /*Animal a("some animal", "Flat", 5);
+ /*   Animal a("some animal", "Flat", 5);
     a.Print();
     a.Move();
     a.MakeSound();*/
