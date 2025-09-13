@@ -91,6 +91,7 @@ public:
     Stack() = delete;
     Stack(int size):maxSize(size)//50
     {
+        //size < 0 throw 
         arr = new int[size];//50
         topIndex = EMPTY;
     }
@@ -112,7 +113,7 @@ public:
             arr[++topIndex] = value;
             return true;
         }
-        return false;
+        return false;  //stack is full throw 
     }
     bool IsEmpty()
     {
@@ -125,7 +126,7 @@ public:
 
             return arr[topIndex--];
         }
-        return 0;
+        return 0;  //stack is empty throw 
     }
     void Clear()
     {
@@ -138,7 +139,7 @@ public:
 
             return arr[topIndex];
         }
-        return 0;
+        return 0;//stack is empty throw 
     }
     int GetSize()
     {
