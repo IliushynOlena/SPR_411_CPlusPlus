@@ -113,8 +113,16 @@ public:
 	//prefix form decrement
 	Point operator --()
 	{
+		
 		--this->x;
 		--this->y;
+		return *this;
+	}
+	//postfix form decrement
+	Point operator --(int)
+	{
+		this->x--;
+		this->y--;
 		return *this;
 	}
 	//postfix form increment
@@ -124,13 +132,7 @@ public:
 		this->y++;
 		return *this;
 	}
-	//postfix form decrement
-	Point operator --(int )
-	{
-		this->x--;
-	    this->y--;
-		return *this;
-	}
+	
 	int getX()const
 	{
 		return x;

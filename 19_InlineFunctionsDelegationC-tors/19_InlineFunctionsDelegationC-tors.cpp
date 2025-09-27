@@ -19,17 +19,18 @@ private:
     static int countHuman;
 public:
     //default constructor version 1
-   /* Human()
+    Human()
     {
         this->name = "no name";
         this->age = 0;
         this->weight = 0;
-    }*/
+    }
     //default constructor version 2
     Human() :name("no name"), age(0), weight(0) { countHuman++; }
     //default constructor version 3
     //Human() :name{ "no name" }, age{ 0 }, weight{ 0 } {}
-  
+   
+    
     Human(string name):Human()
     {
         this->name = name;
@@ -52,12 +53,12 @@ public:
     }
     static  int getCountHuman()
     {
-       
+
         return countHuman;
     }
     void Show()
     {
-       
+     
         cout << "Name : " << name << endl;
         cout << "Age : " << age << endl;
         cout << "Weight : " << weight << endl;
@@ -76,6 +77,19 @@ void SomeFunction()
 
 }
 int Human::countHuman = 0;
+
+class Test
+{
+    //private
+};
+struct Test
+{
+private:
+    string name;
+    //public
+public:
+    void Print(){}
+};
 int main()
 {
     SomeFunction();

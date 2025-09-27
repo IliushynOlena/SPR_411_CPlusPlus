@@ -88,6 +88,13 @@ void Display(const Array& arr)
 	}
 	cout << endl;
 }
+class Test
+{
+	//default ctor 
+	//destructor = default;
+	//copy constructor= delete;
+	//operator =
+};
 int main()
 {
 	const int a = 7;
@@ -104,6 +111,7 @@ int main()
 	int number = (int) 3.33;
 	int size = 5;
 	Array array(size);//parametrized c-tor
+	
 	for (int i = 0; i < array.getSize(); i++)
 	{
 		array.setValue(size - i, i);

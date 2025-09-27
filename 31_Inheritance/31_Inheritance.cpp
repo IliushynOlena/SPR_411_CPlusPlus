@@ -15,13 +15,17 @@ public:
 	Enemy(string n, float s, int sp):name(n),health(maxHealth), strength(s),speed(sp){}
 	void Print()const
 	{
-		cout << "Name : " << name << endl;
+
+		cout << "Name : " << this->name << endl;
 		cout << "Health : " << health << endl;
 		cout << "Strength : " << strength << endl;
 		cout << "Speed : " << speed << endl;
+	
+
 	}
 	void DecreaseHealth(int value)
 	{
+	
 		if (health - value < 0)
 			health = 0;
 		else
@@ -31,6 +35,7 @@ public:
 	{
 		return health > 0;
 	}
+
 };
 //Inheritance 
 //class Child : [spetificator] Parent

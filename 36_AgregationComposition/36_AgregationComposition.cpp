@@ -123,9 +123,16 @@ public:
     }
 };
 
+int A = 10;
 
 int main()
 {
+
+    int A = 100;
+    cout << A << endl;
+    cout << ::A << endl;
+
+
     Printer p("Canon",Type::Color,300,50,30);//default ctor
     p.PrintDodument();
     p.Scan(); 

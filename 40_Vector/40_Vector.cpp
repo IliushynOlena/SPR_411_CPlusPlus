@@ -13,6 +13,7 @@ void Print(const vector<int>& v1)
 int main()
 {
     vector<int> v;//size = 0
+   
     vector<int> v1({1,2,3,4,5,6,7,8,9,10});//size = 10
     vector<int> v2(20);
     vector<int> v3 = { 22,33,44,55,66,77,88 };
@@ -21,6 +22,7 @@ int main()
     {
         cout << v1[i] << " ";
     }
+    //vector<int>::iterator it = v1.begin();
     cout << endl;
     v1[1] = 22;
     for (int item : v1)

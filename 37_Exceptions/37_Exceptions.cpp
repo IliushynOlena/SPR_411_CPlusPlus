@@ -45,6 +45,7 @@ float Divide(float a, float b)
 	}
 	return res;
 	
+	
 }
 class Student
 {
@@ -82,6 +83,9 @@ void Login(const char* login, const char* password)
 
 int main()
 {
+	int a;
+	int b = 7;
+	a = 8;
 	char login[100];
 	char password[100];
 	for (int i = 0; i < 5; i++)
